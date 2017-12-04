@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*重置样式*/
+body{margin:0;font:12px "Microsoft Yahei";}
+p,dl,dd{margin:0;}ul,ol{margin:0;padding:0;list-style:none;}
+h1,h2,h3,h4,h5,h6{margin:0;font-weight:normal;font-size:12px;}
+strong,b{font-weight:normal;}em,i{font-style:normal;}
+img{ border:none;vertical-align:middle;display:block;}a{text-decoration:none;color:#000;}
+table{border-spacing:0; border-collapse:collapse;}th,td{height:100px;text-align:left; vertical-align:top;}
+input{outline:none;margin:0;padding:0;background:none;border:none;font:12px "Microsoft Yahei";}textarea{ overflow:auto; resize:none;}
+
+.clearfix{*zoom:1;}
+.clearfix:after{content:""; clear:both; display:block;}
+.clearDiv{clear:both; height:0;font-size:0; overflow:hidden;}
+/*头部区*/
+header{width:100%;}
+.header-box{width:1000px;height:60px;margin:0 auto;}
+.header-box .logo{float:left;width:164px;margin:14px 0 0 10px;}
+.header-box li{float:left;font:14px '微软雅黑';color:#333;margin-top:26px;}
+.header-box li a{font:12px '微软雅黑';color:#333;margin:0 10px;}
+.header-box p{float:right;font:18px '微软雅黑';color:#333;margin-top:24px;}
+.header-box p span{color:#f00;}
+/*banner-区*/
+.banner{width:100%;height:970px;background:url("../images/bannerbg1.jpg") no-repeat center top;}
+.banner-box{width:1000px;height:970px;margin:0 auto;}
+.banner-box>img{display:block;}
+.banner-box .box2,.box3{position:relative;}
+.banner-box .box2>.bannerText01{position:absolute;left:375px;bottom:70px;}
+.banner-box .box3>.bannerText02{position:absolute;left:398px;bottom:56px;}
+/*内容区*/
+#main{width:100%;background:#f4ebb4;}
+#main>.main1{width:1000px;height:557px;margin:0 auto;background:url("../images/background01.jpg") no-repeat;}
+#main>.main1 .title1{font:46px '微软雅黑';color:#452b00;padding:82px 0 0 400px;}
+#main>.main1 .left{position:relative;float:left;width:430px;}
+#main>.main1 .left .first01{position:absolute;left:84px;top:128px;}
+#main>.main1 .left .textbox{position:absolute;width:290px;left:56px;top:266px;}
+#main>.main1 .textbox span{font-family:'微软雅黑';color:#f15256;}
+#main>.main1 .textbox span:nth-child(1){font-size:26px;line-height:44px;}
+#main>.main1 .textbox span:nth-child(2){font-size:22px;line-height:28px;}
+#main>.main1 .textbox span:nth-child(3){font-size:18px;line-height:30px;}
+
+#main>.main1 .right{position:relative;float:right;width:570px;}
+#main>.main1 .right .btn-left{position:absolute;left:38px;top:250px;z-index:10;}
+#main>.main1 .right .tabBox{position:absolute;left:6px;top:152px;}
+#main>.main1 .right .tabBox .slider-panel{position:absolute;}
+#main>.main1 .right .tabBox #firstPic{left:34px;top:-6px;}
+#main>.main1 .right .btn-tight{position:absolute;right:26px;top:250px;}
+#main>.main1 .right .moreInfo{position:absolute;right:10px;top:202px;}
+/*内容区第二部分*/
+#main>.main2{width:1000px;height:443px;margin:0 auto;background:url("../images/background02.jpg") no-repeat;}
+#main>.main2 .content{position:relative;height:443px;}
+#main>.main2 .content .first02{position:absolute;left:414px;top:90px;}
+#main>.main2 .content .contents{position:absolute;right:0;top:222px;}
+
+/*内容区第三部分*/
+#main>.main3{width:1000px;height:550px;margin:0 auto;background:url("../images/background03.jpg") no-repeat;}
+
+/*内容区第四部分*/
+#main>.main4{width:1000px;height:878px;margin:0 auto;background:url("../images/background04.jpg") no-repeat;}
+
+
+/*左侧导航小挂件*/
+aside{position:fixed;left:4px;top:100px;width:161px;height:372px;background:url("../images/aside_03.png") no-repeat;z-index:10;}
+aside ul{margin-top:18px;text-align:center;}
+aside li:nth-child(1){font:16px '微软雅黑';color:#fff;}
+aside li:nth-child(1) span{color:#f9f96d;}
+aside li:nth-child(2){margin-top:14px;}
+aside li:nth-child(2) a{color:#ffff99;}
+aside li:nth-child(3){margin-top:4px;}
+aside li:nth-child(7){margin-top:-2px;}
+aside li:nth-child(10){margin-top:18px;display:block;font:12px '微软雅黑';color:#ffff99;}
+aside li a{font:12px/34px '微软雅黑';color:#fff;}
+aside li a:hover{color:#ffff99;}
+/*视频挂件*/
+.videos{position:fixed;right:4px;top:100px;width:250px;height:240px;border-radius:10px;background:#ccc;z-index:10;}

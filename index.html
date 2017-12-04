@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript" />
+	<title>baike</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script src="./js/index.js"></script>
+	<script src="./js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<aside>
+	<ul>
+		<li>学员<span>服务</span></li>
+		<li><a href="#">上班族怎么备考？</a></li>
+		<li><a href="#">零基础如何复习？</a></li>
+		<li><a href="#">社区考试考什么？</a></li>
+		<li><a href="#">复习没有方向？</a></li>
+		<li><a href="#">查看课表</a></li>
+		<li><a href="#">网校课程</a></li>
+		<li><a href="#">在线咨询</a></li>
+		<li><a href="#">微信咨询</a></li>
+		<li><a href="#" class="top">TOP</a></li>
+	</ul>
+</aside>
+<video width="320" height="240" controls="controls" class="videos">
+	<source src="http://www.iqiyi.com/v_19rre99v94.html" type="video/ogg">
+	<source src="http://player.video.qiyi.com/7974ff1d9368af770001df26ca3d6874/0/0/v_19rre99v94.swf-albumId=857108500-tvId=857108500-isPurchase=0-cnId=6" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+
+<!--头部区-->
+<header>
+	<div class="header-box">
+		<a href="#" class="logo"><img src="images/logo.jpg" alt=""></a>
+		<ul>
+			<li><a href="#">中公首页</a>|</li><li><a href="#">面授课程</a>|</li><li><a href="#">网校课程</a>|</li>
+			<li><a href="#">图书推荐</a>|</li><li><a href="#">联系我们</a></li>
+		</ul>
+		<p>全国统一咨询电话：<span>400-6300-999</span></p>
+	</div>
+</header>
+<!--banner区-->
+<div class="banner">
+	<div class="banner-box">
+		<div class="box1"><img src="images/banner01.jpg" alt=""></div>
+		<div class="box2"><img src="images/banner02.jpg" alt="">
+			<img src="images/bannerTxt01.png" alt="" class="bannerText01">
+		</div>
+		<div class="box3"><img src="images/banner03.jpg" alt="">
+			<img src="images/bannerTxt02.png" alt="" class="bannerText02">
+		</div>
+	</div>
+</div>
+<!--内容区-->
+<div id="main">
+	<div class="main1">
+		<div class="title1">社区搜索</div>
+		<div class="left">
+			<img class="first01" src="images/first_03.png" alt="">
+			<p class="textbox">
+				<span>招考人数：</span><br>
+				<span>2014-2017年每年招录人数都在急速增长！怎么样，够壮观吧！</span><br>
+				<span><a href="javascript:;" style="color:#f15256;">(左右点击还可查看各省份历年招考人数)</a></span>
+			</p>
+		</div>
+		<div class="right">
+			<img class="btn-left" src="images/left_03.png">
+			<ul class="tabBox slider-main">
+				<li id="firstPic" class="slider-panel"><img src="images/tab1_03.png" alt=""></li>
+				<li class="slider-panel"><img src="images/tab2_03.png" alt=""></li>
+				<li class="slider-panel"><img src="images/tab3_03.png" alt=""></li>
+			</ul>
+			<img class="btn-tight" src="images/right_03.png">
+			<a href="javascript:;" class="moreInfo"><img src="images/tips_03.png" alt=""></a>
+		</div>
+	</div>
+	<div class="main2">
+		<div class="content">
+			<img class="first02" src="images/second_03.png" alt="">
+			<img class="contents" src="images/contenttext_01.png">
+		</div>
+	</div>
+
+	<div class="main3">
+
+	</div>
+
+	<div class="main4">
+
+	</div>
+</div>
+</body>
+<script>
+	$(function(){
+        var currentIndex = 0,
+        length = $('.slider-panel').length;
+        //将除了第一张图片隐藏
+        $('.slider-panel:not(:first)').hide();
+
+        $('.btn-left').unbind('click');
+        $('.btn-left').bind('click', function() {
+            pre();
+        });
+        $('.btn-tight').unbind('click');
+        $('.btn-tight').bind('click', function() {
+            next();
+        });
+
+        /*向前翻页*/
+        function pre() {
+            var preIndex = currentIndex;
+            currentIndex = (--currentIndex + length) % length;
+            play(preIndex, currentIndex);
+        }
+        /*向后翻页*/
+        function next() {
+            var preIndex = currentIndex;
+            currentIndex = ++currentIndex % length;
+            play(preIndex, currentIndex);
+        }
+        /**
+         * 从preIndex页翻到currentIndex页
+         * preIndex 整数，翻页的起始页
+         * currentIndex 整数，翻到的那页
+         */
+        function play(preIndex, currentIndex) {
+            $('.slider-panel').eq(preIndex).fadeOut(500)
+                .parent().children().eq(currentIndex).fadeIn(1000);
+            $('.slider-item').removeClass('slider-item-selected');
+            $('.slider-item').eq(currentIndex).addClass('slider-item-selected');
+        }
+	})
+</script>
+</html>
